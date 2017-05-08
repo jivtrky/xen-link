@@ -1,0 +1,4 @@
+check file notify with path /var/run/linkstate
+   if changed timestamp
+      then exec "/bin/bash -c '/usr/bin/xenstore-write \
+        $(/usr/bin/xenstore-read vm)/link $(cat /var/run/linkstate)'"
