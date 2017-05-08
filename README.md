@@ -16,9 +16,11 @@ This may need to be looked at a little more.
 
 ### ifnetlink daemon:
 How to Build
-`gcc [-DDEBUG] -static ifnetlink.c match.c state.c -o ifnetlink`
-    **OR**
-`gcc [-DDEBUG] -m32 -static ifnetlink.c match.c state.c -o ifnetlink`
+
+`gcc [-DDEBUG] -static ifnetlink.c match.c state.c -o ifnetlink`<br>
+    **OR**<br>
+`gcc [-DDEBUG] -m32 -static ifnetlink.c match.c state.c -o ifnetlink`<br>
+
 
 The daemon takes one required argument, a regular expression of the interface(s)
 to be monitored. 
@@ -32,7 +34,8 @@ init.d script for the ifnetlink daemon
 
 ### linknotify:
 Put it in the `/etc/monit.d/` directory of each node on which the ifnetlink daemon
-is running.
+is running.  This is the monit confiuration file for triggering off of changes made
+by the daemon.
 
 
 ### ifhandler.sh:
